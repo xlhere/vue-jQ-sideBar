@@ -1,7 +1,7 @@
 <template>
   <div class="import-file">
     <el-button @click="handleInsert" icon="el-icon-plus" size="mini" type="primary">{{$t('insert')}}</el-button>
-    <el-button @click="changeLang()">切换</el-button>
+    <el-button type="info" size="mini" @click="changeLang()">切换</el-button>
 
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
       <el-form
