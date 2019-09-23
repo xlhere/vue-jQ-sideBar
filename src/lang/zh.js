@@ -1,4 +1,5 @@
 export default {
+  insert: '添加',
   table: {
     dynamicTips1: '固定表头, 按照表头顺序排序',
     dynamicTips2: '不固定表头, 按照点击顺序排序',

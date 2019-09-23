@@ -1,6 +1,7 @@
 <template>
   <div class="import-file">
-    <el-button @click="handleInsert" icon="el-icon-plus" size="mini" type="primary">添加</el-button>
+    <el-button @click="handleInsert" icon="el-icon-plus" size="mini" type="primary">{{$t('insert')}}</el-button>
+    <el-button @click="changeLang()">切换</el-button>
 
     <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible">
       <el-form
@@ -45,7 +46,7 @@
 export default {
   data() {
     return {
-      optionParentNode:[],
+      optionParentNode: [],
       temp: {
         superiorId: "",
         organizationStructureId: "",
@@ -61,29 +62,32 @@ export default {
         insert: "新增"
       },
       rules: {
-        name: [{ required: true, message: '不能为空', trigger: 'blur' }],
-      },
+        name: [{ required: true, message: "不能为空", trigger: "blur" }]
+      }
     }
   },
   methods: {
-    handleInsert(){
+    handleInsert() {
       this.dialogFormVisible = true
-      this.dialogStatus = 'insert'
+      this.dialogStatus = "insert"
       // this.resetTemp(null)
     },
-    insertRow(){
-    this.$refs.temp.validate(valid => {
-      if(valid){
-        ajax('/zyfx-pc-web/organization/insert.do',this.temp
-        ).then(res=>{
-          this.dialogFormVisible = false
-          this.$message.success({message:res.message,duration:1500})
+    insertRow() {
+      this.$refs.temp.validate(valid => {
+        if (valid) {
+          ajax("/zyfx-pc-web/organization/insert.do", this.temp).then(res => {
+            this.dialogFormVisible = false
+            this.$message.success({ message: res.message, duration: 1500 })
 
-          this.freshTree();
-        })
-      }
-    })
-  },
+            this.freshTree()
+          })
+        }
+      })
+    },
+    changeLang() {
+      const lang = this.$i18n.locale
+      this.$i18n.locale = lang==='zh'?'en':'zh'
+    }
   }
 }
 </script>
