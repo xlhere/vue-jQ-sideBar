@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <div class="nav">
+      <router-link to="/">{{$t('sideBar')}}</router-link>
+      <router-link to="/importFile">{{$t('importFile')}}</router-link>
+      <router-link to="/vuex">{{$t('vuex')}}</router-link>
+    </div>
     <router-view/>
   </div>
 </template>
@@ -24,5 +29,10 @@ figcaption,figure,footer,header,hgroup,menu,nav,section,template,html{
   /* text-align: center; */
   /* color: #2c3e50; */
   /* background: #e9eff8; */
+}
+.nav{
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
 }
 </style>

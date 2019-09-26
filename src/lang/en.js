@@ -1,5 +1,8 @@
 export default {
   insert:'insert',
+  sideBar:'sideBar',
+  vuex:'vuex',
+  importFile:'importFile',
   table: {
     dynamicTips1: 'Fixed header, sorted by header order',
     dynamicTips2: 'Not fixed header, sorted by click order',
