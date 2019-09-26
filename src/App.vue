@@ -5,13 +5,40 @@
       <router-link to="/importFile">{{$t('importFile')}}</router-link>
       <router-link to="/vuex">{{$t('vuex')}}</router-link>
     </div>
+    <div class="lang">
+       <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
+        <div class="avatar-wrapper">
+          <span>{{$i18n.locale}}</span>
+          <i class="el-icon-caret-bottom" />
+        </div>
+        <el-dropdown-menu slot="dropdown">
+          <a v-for="lang in langs" @click="changeLang()">
+            <el-dropdown-item>{{lang}}</el-dropdown-item>
+          </a>
+        </el-dropdown-menu>
+      </el-dropdown>
+    </div>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      langs: Object.keys(this.$i18n.messages)
+    }
+  },
+  created () {
+    console.log(this.langs)
+  },
+  methods: {
+    changeLang() {
+      const lang = this.$i18n.locale
+      this.$i18n.locale = lang==='zh'?'en':'zh'
+    }
+  }
 }
 </script>
 
@@ -34,5 +61,15 @@ figcaption,figure,footer,header,hgroup,menu,nav,section,template,html{
   text-align: center;
   font-size: 16px;
   padding: 10px;
+}
+.lang{
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.el-dropdown{
+  font-size: 18px;
+  color: #000;
 }
 </style>
