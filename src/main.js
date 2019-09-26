@@ -10,6 +10,7 @@ import XLSX from 'xlsx'
 import VueI18n from 'vue-i18n'
 import zh from './lang/zh'
 import en from './lang/en'
+import store from './store/index'
 
 Vue.use(VueI18n)
 let lang = (navigator.languages && navigator.languages[0]) || navigator.language
@@ -33,6 +34,7 @@ new Vue({
   el: '#app',
   i18n,
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
