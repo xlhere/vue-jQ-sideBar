@@ -1,7 +1,7 @@
 export default {
   insert: '添加',
   sideBar:'侧边栏',
-  importFile: '导入文件',
+  importFile: '导入导出',
   vuex:'存储',
   table: {
     dynamicTips1: '固定表头, 按照表头顺序排序',
