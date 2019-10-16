@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "element-ui": "^2.7.0",
+    "file-saver": "^2.0.2",
     "jquery": "^3.4.1",
+    "script-loader": "^0.7.2",
     "vue": "^2.5.2",
     "vue-i18n": "^8.14.1",
     "vue-router": "^3.0.1",
