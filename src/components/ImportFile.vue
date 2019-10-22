@@ -1,6 +1,5 @@
 <template>
   <div class="hello">
-    {{msg}}
     <div>
       <el-button @click="handleDownloadData" size="mini" style="margin:30px auto;" type="primary">导出</el-button>
       <el-table :data="tableData" stripe style="width: 600px;margin:30px auto;">
@@ -22,7 +21,6 @@ export default {
   name: "excelExport",
   data() {
     return {
-      msg: "Welcome to Your Excel Export",
       tableData: [
         {
           date: "2016-05-02",

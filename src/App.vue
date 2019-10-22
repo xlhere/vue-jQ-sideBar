@@ -4,6 +4,7 @@
       <router-link to="/">{{$t('sideBar')}}</router-link>
       <router-link to="/importFile">{{$t('importFile')}}</router-link>
       <router-link to="/vuex">{{$t('vuex')}}</router-link>
+      <router-link to="/map">{{$t('map')}}</router-link>
     </div>
     <div class="lang">
        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
@@ -71,5 +72,6 @@ figcaption,figure,footer,header,hgroup,menu,nav,section,template,html{
 .el-dropdown{
   font-size: 18px;
   color: #000;
+  cursor: pointer;
 }
 </style>
