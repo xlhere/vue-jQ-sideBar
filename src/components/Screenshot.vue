@@ -8,7 +8,7 @@ export default {
 
 }
 </script>
-<style lang="">
+<style lang="scss">
 .b-map{
   text-align: center;
 }
