@@ -1,6 +1,6 @@
 <template>
   <div class="b-map">
-    <p>百度地图demo</p>
+    <p>截图demo</p>
   </div>
 </template>
 <script>

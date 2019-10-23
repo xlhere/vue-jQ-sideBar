@@ -5,6 +5,7 @@
       <router-link to="/importFile">{{$t('importFile')}}</router-link>
       <router-link to="/vuex">{{$t('vuex')}}</router-link>
       <router-link to="/map">{{$t('map')}}</router-link>
+      <router-link to="/screenshot">{{$t('screenshot')}}</router-link>
     </div>
     <div class="lang">
        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">

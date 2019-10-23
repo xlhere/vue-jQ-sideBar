@@ -4,6 +4,7 @@ import SideBar from '@/components/SideBar'
 import ImportFile from '@/components/ImportFile'
 import Vuex from '@/components/Vuex'
 import BMap from '@/components/BMap'
+import Screenshot from '@/components/Screenshot'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/map',
       name: 'BMap',
       component: BMap
+    },
+    {
+      path: '/screenshot',
+      name: 'Screenshot',
+      component: Screenshot
     }
   ]
 })

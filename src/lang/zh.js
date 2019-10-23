@@ -4,6 +4,7 @@ export default {
   importFile: '导入导出',
   vuex:'存储',
   map:'地图',
+  screenshot:'截屏',
   table: {
     dynamicTips1: '固定表头, 按照表头顺序排序',
     dynamicTips2: '不固定表头, 按照点击顺序排序',

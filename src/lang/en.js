@@ -4,6 +4,7 @@ export default {
   vuex:'vuex',
   importFile:'import&export',
   map:'map',
+  screenshot:'screenshot',
   table: {
     dynamicTips1: 'Fixed header, sorted by header order',
     dynamicTips2: 'Not fixed header, sorted by click order',
