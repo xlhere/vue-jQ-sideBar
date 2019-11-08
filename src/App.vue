@@ -6,6 +6,8 @@
       <router-link to="/vuex">{{$t('vuex')}}</router-link>
       <router-link to="/map">{{$t('map')}}</router-link>
       <router-link to="/screenshot">{{$t('screenshot')}}</router-link>
+      <router-link to="/area">区域</router-link>
+      <router-link to="/aMap">高德地图</router-link>
     </div>
     <div class="lang">
        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">

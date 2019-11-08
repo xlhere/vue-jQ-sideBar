@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import SideBar from '@/components/SideBar'
-import ImportFile from '@/components/ImportFile'
-import Vuex from '@/components/Vuex'
-import BMap from '@/components/BMap'
-import Screenshot from '@/components/Screenshot'
+import SideBar from '@/views/SideBar'
+import ImportFile from '@/views/ImportFile'
+import Vuex from '@/views/Vuex'
+import BMap from '@/views/BMap'
+import Screenshot from '@/views/Screenshot'
+import Area from '@/views/Area'
+import AMap from '@/views/AMap'
 
 Vue.use(Router)
 
@@ -34,6 +36,16 @@ export default new Router({
       path: '/screenshot',
       name: 'Screenshot',
       component: Screenshot
+    },
+    {
+      path: '/area',
+      name: 'Area',
+      component: Area
+    },
+    {
+      path: '/aMap',
+      name: 'AMap',
+      component: AMap
     }
   ]
 })
