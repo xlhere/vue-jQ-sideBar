@@ -96,7 +96,7 @@ export default {
     //请求省份接口
     _this.$axios({
         method: 'post',
-        url: '//112.126.120.162/gwcommondata',
+        url: '//47.93.9.213/gwcommondata',
         headers: {
             'Authorization': sessionStorage.getItem("Token")
         },
@@ -184,7 +184,7 @@ export default {
           //请求城市接口
           _this.$axios({
               method: 'post',
-              url: '//112.126.120.162/gwcommondata',
+              url: '//47.93.9.213/gwcommondata',
               headers: {
                   'Authorization': sessionStorage.getItem("Token")
               },
@@ -222,7 +222,7 @@ export default {
           //请求城市接口
           _this.$axios({
               method: 'post',
-              url: '//112.126.120.162/gwcommondata',
+              url: '//47.93.9.213/gwcommondata',
               headers: {
                   'Authorization': sessionStorage.getItem("Token")
               },
@@ -264,7 +264,7 @@ export default {
           //请求城市接口
           _this.$axios({
               method: 'post',
-              url: '//112.126.120.162/gwcommondata',
+              url: '//47.93.9.213/gwcommondata',
               headers: {
                   'Authorization': sessionStorage.getItem("Token")
               },
@@ -310,7 +310,7 @@ export default {
           //请求城市接口
           _this.$axios({
               method: 'post',
-              url: '//112.126.120.162/gwcommondata',
+              url: '//47.93.9.213/gwcommondata',
               headers: {
                   'Authorization': sessionStorage.getItem("Token")
               },
