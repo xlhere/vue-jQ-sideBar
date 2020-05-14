@@ -2,6 +2,7 @@ export default {
   insert:'insert',
   sideBar:'sideBar',
   vuex:'vuex',
+  card:'card',
   importFile:'import&export',
   map:'map',
   screenshot:'screenshot',

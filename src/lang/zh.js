@@ -3,6 +3,7 @@ export default {
   sideBar:'侧边栏',
   importFile: '导入导出',
   vuex:'存储',
+  card:'卡片',
   map:'地图',
   screenshot:'截屏',
   table: {

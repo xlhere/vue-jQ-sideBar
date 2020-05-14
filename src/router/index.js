@@ -7,6 +7,7 @@ import BMap from '@/views/BMap'
 import Screenshot from '@/views/Screenshot'
 import Area from '@/views/Area'
 import AMap from '@/views/AMap'
+import Card from '@/views/Card'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/aMap',
       name: 'AMap',
       component: AMap
+    },
+    {
+      path: '/card',
+      name: 'Card',
+      component: Card
     }
   ]
 })

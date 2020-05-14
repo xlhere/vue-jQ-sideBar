@@ -8,6 +8,7 @@
       <router-link to="/screenshot">{{$t('screenshot')}}</router-link>
       <router-link to="/area">区域</router-link>
       <router-link to="/aMap">高德地图</router-link>
+      <router-link to="/card">{{$t('card')}}</router-link>
     </div>
     <div class="lang">
        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
