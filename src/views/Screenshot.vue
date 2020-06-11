@@ -6,6 +6,7 @@
       <p>它不需要服务端的操作，只在前端即可完成。</p>
     </div>
     <el-button type="success" @click="generatorImage" class="img-btn">生成图片</el-button>
+    <el-button type="success" @click="test" class="img-btn">生成图片</el-button>
   </div>
 </template>
 
@@ -27,6 +28,11 @@ export default {
         // document.body.appendChild(link)
         link.click()
       })
+    },
+    test(){
+      this.$router.push({ path: '/importFile' })
+      alert(JSON.stringify(this.$route))
+      console.log(this.$route)
     }
   }
 }

@@ -8,6 +8,7 @@ import Screenshot from '@/views/Screenshot'
 import Area from '@/views/Area'
 import AMap from '@/views/AMap'
 import Card from '@/views/Card'
+import Element from '@/views/Element'
 
 Vue.use(Router)
 
@@ -52,6 +53,11 @@ export default new Router({
       path: '/card',
       name: 'Card',
       component: Card
+    },
+    {
+      path: '/element',
+      name: 'Element',
+      component: Element
     }
   ]
 })

@@ -17,7 +17,7 @@
           <i class="el-icon-caret-bottom" />
         </div>
         <el-dropdown-menu slot="dropdown">
-          <a v-for="lang in langs" @click="changeLang()">
+          <a v-for="lang in langs" :key="lang" @click="changeLang()">
             <el-dropdown-item>{{lang}}</el-dropdown-item>
           </a>
         </el-dropdown-menu>
