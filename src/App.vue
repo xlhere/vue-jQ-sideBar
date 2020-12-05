@@ -9,6 +9,7 @@
       <router-link to="/area">区域</router-link>
       <router-link to="/aMap">高德地图</router-link>
       <router-link to="/card">{{$t('card')}}</router-link>
+      <router-link to="/eventbus">Eventbus</router-link>
     </div>
     <div class="lang">
        <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
@@ -36,7 +37,7 @@ export default {
     }
   },
   created () {
-    console.log(this.langs)
+    // console.log(this.langs)
   },
   methods: {
     changeLang() {

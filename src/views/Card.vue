@@ -1,25 +1,17 @@
 <template>
   <div class="card-container">
-    <el-card class="box-card" v-show="show == 'front'">
+    <el-card class="box-card">
       <div class="clearfix" slot="header">
         <a :class="{active:isActive}" @click="showGeneral" class="general">General</a>
         <a :class="{active:!isActive}" @click="showCode" class="code">Code</a>
       </div>
-      <div class="main">{{message}}</div>
-      <div class="footer">
-        <a @click="showBack" class="active">Flip Card</a>
-        <a @click="gotIt" class="get">I Know It</a>
-        <a @click="nextCard" class="active">Next Card</a>
+      <div class="main">
+        <p v-for="item in list" :key="item">
+          <span>{{item}}</span>
+        </p>
       </div>
-    </el-card>
-    <el-card class="box-card" v-show="show == 'back'">
-      <div class="clearfix" slot="header">
-        <a :class="{active:isActive}" @click="showGeneral" class="general">General</a>
-        <a :class="{active:!isActive}" @click="showCode" class="code">Code</a>
-      </div>
-      <div class="main">{{message}}</div>
       <div class="footer">
-        <a @click="showFront" class="active">Flip Card</a>
+        <a @click="showCurrentCard()" class="active">Flip Card</a>
         <a @click="gotIt" class="get">I Know It</a>
         <a @click="nextCard" class="active">Next Card</a>
       </div>
@@ -31,19 +23,19 @@
 export default {
   data() {
     return {
-      show: "front",
+      show: true,
       isActive: true,
-      message:'正面'
+      list:[0,1,2,3,4]
     }
   },
+  created() {
+    // this.list.length = 1
+  },
   methods: {
-    showBack() {
-      this.show = "back"
-      this.message = '正面'
-    },
-    showFront() {
-      this.show = "front"
-      this.message = '反面'
+    showCurrentCard() {
+      // this.list = this.show ? '反面' : '正面'
+      // this.show = !this.show
+      this.list.length = 1
     },
     showGeneral() {
       this.isActive = true
@@ -59,11 +51,11 @@ export default {
 
 <style lang="scss">
 .card-container {
-  margin-left: 30%;
   position:relative;
   .box-card {
-    width: 67%;
-    // height: 60%;
+    position: relative;
+    width: 50%;
+    margin: auto;
     height: 600px;
   }
   a {
@@ -105,9 +97,11 @@ export default {
   }
   .footer {
     position: absolute;
+    width: 100%;
     bottom: 20px;
     text-align: center;
-    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
     a{
       border-radius: 5px;
       width: 120px;

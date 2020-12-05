@@ -9,6 +9,7 @@ import Area from '@/views/Area'
 import AMap from '@/views/AMap'
 import Card from '@/views/Card'
 import Element from '@/views/Element'
+import Eventbus from '@/views/Eventbus'
 
 Vue.use(Router)
 
@@ -58,6 +59,11 @@ export default new Router({
       path: '/element',
       name: 'Element',
       component: Element
+    },
+    {
+      path: '/eventbus',
+      name: 'Eventbus',
+      component: Eventbus
     }
   ]
 })

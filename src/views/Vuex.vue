@@ -3,30 +3,37 @@
     <p>{{changableNum}}</p>
     <p v-show="isShow">show</p>
     <p>
-       <el-button type="primary" @click="show1">show</el-button>
-       <el-button type="primary" @click="hide1">hide</el-button>
-       <el-button type="primary" @click="newNum1(5)">sum</el-button>
+      <el-button @click="show1" type="primary">show</el-button>
+      <el-button @click="hide1" type="primary">hide</el-button>
+      <el-button @click="newNum1(5)" type="primary">sum</el-button>
     </p>
+    <span>{{count}}</span>
   </div>
 </template>
 
 <script>
-import {mapState,mapGetters,mapActions,mapMutations} from 'vuex';
+import Bus from '../utils/index.js';
+import { mapState, mapGetters, mapActions, mapMutations } from "vuex"
 
 export default {
   computed: {
-    ...mapGetters([
-      'isShow',
-      'getChangedNum',
-    ]),
-    ...mapState(['changableNum'])
+    ...mapGetters(["isShow", "getChangedNum"]),
+    ...mapState(["changableNum"]),
   },
-
-  created () {
+  data() {
+    return {
+      count:0
+    }
+  },
+  created() {
+    Bus.$on('getTarget',val => {
+      this.count = val
+      console.log(this.count)
+    })
   },
 
   methods: {
-    ...mapMutations(['show','hide','newNum']),
+    ...mapMutations(["show", "hide", "newNum"]),
     show1() {
       this.show()
     },
@@ -36,13 +43,13 @@ export default {
     newNum1(sum) {
       this.newNum(sum)
       console.log(this.$store.state.changableNum)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style lang="">
-.vuex{
+.vuex {
   padding: 0 20px;
 }
 </style>
